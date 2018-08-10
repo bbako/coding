@@ -24,10 +24,6 @@ $(document).ready(function(){
     	
     	var input = $("#input1").get(0).value;
     	var cond = $("#cond").get(0).value;
-    	
-    	console.log(input);
-    	
-        console.log("click?");
         
         $.ajax({
 		    	  type: "POST",
@@ -38,8 +34,10 @@ $(document).ready(function(){
 		    	  },
 		 		  dataType: 'Json',
 		    	  success: function(re){
-		    		console.log("리스트를 받아서 ");
-		    				
+		    		
+		    		$("#resultQ").get(0).innerText = re.resultQ;
+		    		$("#resultM").get(0).innerText = re.resultM;
+		    		
 		    	  },
     	}); 
     });
