@@ -9,10 +9,10 @@
 </head>
 <body>
 입력 : 
-<textarea rows="10" cols="200" id="input1"></textarea><br>
+<textarea rows="10" cols="150" id="input"></textarea><br><br>
 
 출력 묶음 조건 : 
-<input id="cond"><br>
+<input id="cond" type="number" ><br><br>
 <button id="btn">출력</button><br>
 <br>
 몫 : <span id="resultQ"></span><br><br>
@@ -22,7 +22,7 @@
 $(document).ready(function(){
     $("#btn").click(function(){
     	
-    	var input = $("#input1").get(0).value;
+    	var input = $("#input").get(0).value;
     	var cond = $("#cond").get(0).value;
         
         $.ajax({
